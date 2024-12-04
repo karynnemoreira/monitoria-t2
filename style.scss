@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//Início da estilização da header
+header {
+  height: 15vh;
+  background-color: aqua;
+  display: flex; //ativando as caixas flexíveis
+  justify-content: space-around; //trabalha no eixo x - horizontal
+  align-items: center; //trabalha no eixo y - vertical
+  h2 {
+    width: 20%;
+    border: solid red;
+  }
+
+  nav {
+    width: 50%;
+    border: solid purple;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none; //removendo o estilo da lista
+  }
+
+  button {
+    width: 10%;
+    border: solid orange;
+  }
+}
+
+//Header para mobile/celular
+//mínimo da largura da tela e máximo da largura da tela
+@media (min-width: 201px) and (max-width: 500px) {
+  header {
+    height: 30vh;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      display: none; //Faz com que o seletor suma
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+//-----MONITORIA
+
+//Para chamar uma class utilizamos o .  .nome da class criada
+.container-background-image {
+  height: 80vh;
+  background-color: cadetblue;
+  background-image: url("./imagens/background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //align-items: center;
+  h1 {
+    color: #ffffff;
+    font-size: 6rem;
+  }
+
+  p {
+    color: #ffffff;
+    font-size: 2rem;
+  }
+
+  button {
+    width: 10%;
+    height: 5vh;
+  }
+}
